@@ -1,0 +1,26 @@
+HSQL
+
+[INFO] parent ............................................ SUCCESS [0.502s]
+[INFO] Tapestry5-Cayenne Core Library .................... SUCCESS [5.567s]
+[INFO] Tapestry5-Cayenne Server Library .................. SUCCESS [39.156s]
+[INFO] Tapestry5-Cayenne Client Library .................. SUCCESS [7.668s]
+[INFO] Tapestry5-Cayenne Integration ..................... SUCCESS [0.047s]
+
+DERBY
+
+Fail
+
+H2 -POSTGRESQL
+
+[INFO] parent ............................................ SUCCESS [0.506s]
+[INFO] Tapestry5-Cayenne Core Library .................... SUCCESS [5.501s]
+[INFO] Tapestry5-Cayenne Server Library .................. SUCCESS [39.251s]
+[INFO] Tapestry5-Cayenne Client Library .................. SUCCESS [7.935s]
+[INFO] Tapestry5-Cayenne Integration ..................... SUCCESS [0.079s]
+
+H2 -MVCC
+[INFO] parent ............................................ SUCCESS [0.502s]
+[INFO] Tapestry5-Cayenne Core Library .................... SUCCESS [5.406s]
+[INFO] Tapestry5-Cayenne Server Library .................. SUCCESS [39.693s]
+[INFO] Tapestry5-Cayenne Client Library .................. SUCCESS [7.976s]
+[INFO] Tapestry5-Cayenne Integration ..................... SUCCESS [0.063s]

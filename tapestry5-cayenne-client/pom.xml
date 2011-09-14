@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+    <groupId>maven.demo</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../parent/pom.xml</relativePath>
+  </parent> 
+  
+    <groupId>com.googlecode.tapestry5-cayenne</groupId>
+    <artifactId>tapestry5-cayenne-client</artifactId>
+    <version>0.5-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Tapestry5-Cayenne Client Library</name>
+    <description>
+        Module for Cayenne ROP client projects.
+    </description>
+    <inceptionYear>2008</inceptionYear>
+    <dependencies>
+        <dependency>
+            <groupId>com.googlecode.tapestry5-cayenne</groupId>
+            <artifactId>tapestry5-cayenne-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-core</artifactId>
+            <version>${tapestry-release-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cayenne</groupId>
+            <artifactId>cayenne-client</artifactId>
+            <version>${cayenne-release-version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2.1</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>client-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attached</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>caucho</id>
+            <name>Caucho Repository</name>
+            <url>http://caucho.com/m2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+    
+    <properties>
+        <hsqldb-database-version>1.8.0.7</hsqldb-database-version>
+        <derby-database-version>10.8.1.2</derby-database-version>
+        <h2-database-version>1.3.159</h2-database-version>
+        <cayenne-release-version>3.0.2</cayenne-release-version>
+        <tapestry-release-version>5.2.6</tapestry-release-version>
+        <!-- <tapestry-release-version>5.3-beta-5</tapestry-release-version> -->
+        <testng-test-version>5.12.1</testng-test-version>
+        <easymock-test-version>2.3</easymock-test-version>
+        <servlet-api.version>2.4</servlet-api.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+</project>
+

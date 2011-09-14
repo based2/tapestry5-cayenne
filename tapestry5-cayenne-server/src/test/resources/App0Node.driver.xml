@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Check TestUtils to change the database  --> 
+ 
+<!--  
+<driver project-version="3.0.0.1" class="org.hsqldb.jdbcDriver">
+	<url value="jdbc:hsqldb:mem:tapestrycayenne"/>
+	<connectionPool min="1" max="1"/>
+	<login userName="sa" />
+</driver>
+-->
+  
+<!--  some errors with derby ... to re-test -->
+<!-- <driver project-version="3.0.0.1" class="org.apache.derby.jdbc.EmbeddedDriver">
+   <url value="jdbc:derby:memory:tapestrycayenne;create=true;MODE=PostgreSQL;collation=TERRITORY_BASED" />
+   <connectionPool min="1" max="1" />
+   <login userName="sa" password="sa" />
+</driver>
+-->
+
+<!--  
+<driver project-version="2.0" class="org.apache.derby.jdbc.ClientDriver">
+    <url value="jdbc:derby://127.0.0.1:1527/disc-db;create=true"/>
+    <connectionPool min="1" max="1" />
+</driver> -->
+
+
+<driver project-version="3.0.0.1" class="org.h2.Driver">
+        <url value="jdbc:h2:tapestrycayenne;create=true;MODE=PostgreSQL;DB_CLOSE_DELAY=-1"/>
+        <connectionPool min="1" max="1"/>
+        <login userName="park" password="park"/>
+</driver>
+
+
+<!--  
+ <driver project-version="3.0.0.1" class="org.h2.Driver">
+    <url value="jdbc:h2:mem:myTestMem;MVCC=TRUE"/>
+    <connectionPool min="1" max="1"/>
+    <login userName="sa" password="user" />
+</driver>
+-->
+
+<!--  to test -->
+<!-- 
+<driver project-version="3.0" class="org.h2.Driver">
+        <url value="jdbc:h2:nio:/opt/jbookshelf/db/jbs;TRACE_LEVEL_FILE=1;TRACE_LEVEL_SYSTEM_OUT=0;TRACE_MAX_FILE_SIZE=1;AUTO_SERVER=TRUE"/>
+        <connectionPool min="1" max="1"/>
+        <login userName="sa"/>
+</driver>
+-->
+
